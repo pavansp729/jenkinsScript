@@ -1,4 +1,4 @@
-def completeSteps() {
+def call(String repoUrl) {
     pipeline {
         agent {
             label 'ecs'
