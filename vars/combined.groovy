@@ -1,4 +1,4 @@
-def call(String repoUrl) {
+def call(Map config = [:]) {
     pipeline {
         agent {
             label 'ecs'
