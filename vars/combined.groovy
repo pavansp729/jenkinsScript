@@ -16,6 +16,11 @@ def call(Map config = [:]) {
                                 sh 'echo build true'
                             }
                         }
+                        if (config.build == false) {
+                            stage ('Stage 1') {
+                                sh 'echo build skipped'
+                            }
+                        }                        
                     }
                 }
             }
