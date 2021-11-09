@@ -10,6 +10,13 @@ def call(Map config = [:]) {
             stage('Build') {
                 steps {
                     sh 'npm install'
+                    script {
+                        if (config.build) {
+                            stage ('Stage 1') {
+                                sh 'echo build true'
+                            }
+                        }
+                    }
                 }
             }
             stage('Post Action') {
